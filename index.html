@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Formulir Pendaftaran</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <style>
+            header {
+                background: linear-gradient(90.22deg, #2B7A0B 0%,  #7DCE13 100%);
+                padding: 1em;
+                color: white;
+            }
+            .container {
+                padding: 2em;
+            }
+            footer {
+                background: linear-gradient(90.22deg, #2B7A0B 0%,  #7DCE13 100%);
+                padding: 1em 0.5em;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 style="text-align: center;">FORMULIR PENDAFTARAN PASIEN BARU</h1>
+            <h5 style="text-align: center;">PERHATIAN: HARAP MENGISI FORMULIR INI DENGAN LENGKAP DAN JELAS</h5>
+        </header>
+        <div class="container">
+            <h5>I. IDENTITAS PASIEN</h5>
+            <form name="formPendaftaran" action="daftar.php" method="post">
+                <div class="form-group">
+                    <label>Nama Pasien</label>
+                    <input type="text" name="nama" placeholder="Nama Lengkap" class="form-control" required maxlength="40" minlength="3">
+                </div>
+                <div class="form-group">
+                    <label>Tempat Lahir</label>
+                    <input type="text" name="tempat-lahir" placeholder="Tempat Lahir" class="form-control" required maxlength="40" minlength="3">
+                </div>
+                <div class="form-group">
+                    <label>Tanggal Lahir</label>
+                    <input type="date" name="tanggal-lahir" placeholder="DD/MM/YYYY" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Jenis Kelamin</label>
+                    <select name="jenis-kelamin" class="form-control">
+                        <option value="0">Pilih Jenis Kelamin</option>
+                        <option value="1">Laki-Laki</option>
+                        <option value="2">Perempuan</option>
+                    </select>
+                <div class="form-group">
+                    <label>Alamat</label>
+                    <input type="text" name="alamat" placeholder="Alamat" class="form-control" required maxlength="100" minlength="3">
+                </div>
+                <div class="form-group">
+                    <label>RT</label>
+                    <input type="number" name="RT" placeholder="RT" class="form-control" required maxlength="3" minlength="1">
+                </div>
+                <div class="form-group">
+                    <label>RW</label>
+                    <input type="number" name="RW" placeholder="RW" class="form-control" required maxlength="3" minlength="1">
+                </div>
+                <div class="form-group">
+                    <label>Provinsi</label>
+                    <input type="text" name="RT" placeholder="Provinsi" class="form-control" required maxlength="40" minlength="3">
+                </div>
+                <div class="form-group">
+                    <label>Kecamatan</label>
+                    <input type="text" name="RT" placeholder="Kecamatan" class="form-control" required maxlength="40" minlength="3">
+                </div>
+                <div class="form-group">
+                    <label>Kelurahan/Desa</label>
+                    <input type="text" name="RT" placeholder="Kelurahan/Desa" class="form-control" required maxlength="40" minlength="3">
+                </div>
+                <div class="form-group">
+                    <label>No.Tel/HP</label>
+                    <input type="tel" name="telepon" placeholder="+62-XXX-XXXX-XXXX" class="form-control" required maxlength="20" minlength="12">
+                </div>
+                <div class="form-group">
+                    <label>Kode Pos</label>
+                    <input type="number" name="kodepos" placeholder="Kode Pos" class="form-control" required maxlength="40" minlength="3">
+                </div>
+                <div class="form-group">
+                    <label>Agama</label>
+                    <select name="agama" class="form-control">
+                        <option value="0">Pilih Agama</option>
+                        <option value="1">Islam</option>
+                        <option value="2">Kristen</option>
+                        <option value="3">Hindu</option>
+                        <option value="4">Budha</option>
+                        <option value="5">Kong Hu Chu</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Pendidikan Terakhir</label>
+                    <select name="pendidikan" class="form-control">
+                        <option value="0">Pilih Pendidikan Terakhir</option>
+                        <option value="1">Tidak Bersekolah</option>
+                        <option value="2">SD</option>
+                        <option value="3">SMP</option>
+                        <option value="4">SLTA/Sederajat</option>
+                        <option value="5">D1</option>
+                        <option value="6">D2</option>
+                        <option value="7">D3</option>
+                        <option value="8">S1</option>
+                        <option value="9">S2</option>
+                        <option value="10">S3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Pekerjaan</label>
+                    <input type="text" name="pekerjaan" placeholder="Pekerjaan" class="form-control" required maxlength="40" minlength="3">
+                </div>
+
+                <h5>II. PENANGGUNG JAWAB PASIEN</h5>
+                <div class="form-group">
+                    <label>Hubungan dengan Pasien</label>
+                    <select name="hubungan" class="form-control">
+                        <option value="0">Pilih Hubungan dengan Pasien</option>
+                        <option value="1">Suami/Istri</option>
+                        <option value="2">Orang Tua</option>
+                        <option value="3">Anak</option>
+                        <option value="4">Cucu</option>
+                        <option value="5">Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Nama Penanggung Jawab</label>
+                    <input type="text" name="nama-penanggung" placeholder="Nama Penanggung Jawab" class="form-control" required maxlength="40" minlength="3">
+                </div>
+                <div class="form-group">
+                    <label>Pendidikan Penanggung Jawab</label>
+                    <select name="pendidikan-penanggung " class="form-control">
+                        <option value="0">Pilih Pendidikan Penanggung Jawab</option>
+                        <option value="1">Tidak Bersekolah</option>
+                        <option value="2">SD</option>
+                        <option value="3">SMP</option>
+                        <option value="4">SLTA/Sederajat</option>
+                        <option value="5">D1</option>
+                        <option value="6">D2</option>
+                        <option value="7">D3</option>
+                        <option value="8">S1</option>
+                        <option value="9">S2</option>
+                        <option value="10">S3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Pekerjaan Penanggung Jawab</label>
+                    <input type="text" name="pekerjaan-penanggung" placeholder="Pekerjaan Penanggung Jawab" class="form-control" required maxlength="40" minlength="3">
+                </div>
+                <div class="form-group">
+                    <label>Tanda Tangan</label>
+                    <input type="file" name="ttd">
+                </div>
+                <button type="submit" class="bts btn-primary">Submit</button>
+            </form>
+        </div>
+        <script>
+            function validateForm() {
+                if (document.forms["formPendaftaran"]["nama"].value == "") {
+                    alert("Nama Pasien Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["nama"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["tempat-lahir"].value == "") {
+                    alert("Tempat Lahir Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["tempat-lahir"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["tanggal-lahir"].value == "") {
+                    alert("Tanggal Lahir Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["tanggal-lahir"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["jenis-kelamin"].selectedIndex < 1) {
+                    alert("Pilih Jenis Kelamin");
+                    document.forms["formPendaftaran"]["jenis-kelamin"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["alamat"].value == "") {
+                    alert("Alamat Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["alamat"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["provinsi"].value == "") {
+                    alert("Provinsi Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["provinsi"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["kecamatan"].value == "") {
+                    alert("Kecamatan Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["kecamatan"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["kelurahan-desa"].value == "") {
+                    alert("Kelurahan/Desa Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["kelurahan-desa"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["telepon"].value == "") {
+                    alert("Telepon Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["telepon"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["kodepos"].value == "") {
+                    alert("Kodepos Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["kodepos"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["agama"].selectedIndex < 1) {
+                    alert("Pilih Agama");
+                    document.forms["formPendaftaran"]["agama"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["pendidikan"].selectedIndex < 1) {
+                    alert("Pilih Pendidikan");
+                    document.forms["formPendaftaran"]["pendidikan"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["pekerjaan"].value == "") {
+                    alert("Pekerjaan Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["pekerjaan"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["hubungan"].selectedIndex < 1) {
+                    alert("Pilih Hubungan dengan Pasien");
+                    document.forms["formPendaftaran"]["hubungan"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["nama-penanggung"].value == "") {
+                    alert("Nama Penanggung Jawab Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["nama-penanggung"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["pendidikan-penanggung"].selectedIndex < 1) {
+                    alert("Pilih Pendidikan Penanggung Jawab.");
+                    document.forms["formPendaftaran"]["pendidikan-penanggung"].focus();
+                    return false;
+                }
+                if (document.forms["formPendaftaran"]["pekerjaan-penanggung"].value == "") {
+                    alert("Pekerjaan Penanggung Jawab Tidak Boleh Kosong");
+                    document.forms["formPendaftaran"]["pekerjaan-penanggung"].focus();
+                    return false;
+                }
+            }
+        </script>
+        <footer>
+            <h5>RUMAH SAKIT UMUM DAERAH AROSUKA</h5>
+            <P>Jl. Raya Solok Padang KM. 20 Arosuka Kode Pos 27364</p>
+            <p>Provinsi Sumatera Barat</p>
+            <p>Telp./Fax (0755) 31160</p>
+            <p>Email <a href="mailto:rsudarosukakabsolok@gmail.com" style="color: white;">rsudarosukakabsolok@gmail.com</a></p>
+            <p>&copy 2022</p>
+        </footer>
+    </body>
+</html>
